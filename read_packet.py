@@ -33,7 +33,7 @@ NAT = NFV_APP('nat', '10','1' '14', '-1', '0x1',NO_CHANGE)
 # Initailize NAT application paramters
 NFV_RUNNING.append(NAT)
 
-ALLOCATION_DIR="/home/shelbyt/research/dynamic-nfv/"
+ALLOCATION_DIR="/home/shelbyt/research/lambda-balance-nfv/"
 
 args = (ALLOCATION_DIR + "allocation_app", "-h")
 popen = subprocess.Popen(args, stdout=subprocess.PIPE)
