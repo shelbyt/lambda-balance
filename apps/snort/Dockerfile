@@ -92,7 +92,8 @@ RUN wget https://www.snort.org/downloads/community/community-rules.tar.gz -O com
 RUN tar xvfz community-rules.tar.gz
 RUN cp community-rules/community.rules /etc/snort/rules/local.rules
 
-ENV NETWORK_INTERFACE em1
+# Change interface to p2p1 which is connected to p1p1
+ENV NETWORK_INTERFACE p2p1
 
 RUN echo post-up ethtool -K ${NETWORK_INTERFACE} gro off >> /etc/network/interfaces
 RUN echo post-up ethtool -K ${NETWORK_INTERFACE} lro off >> /etc/network/interfaces
